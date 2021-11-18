@@ -123,7 +123,7 @@ func TestFilterOldComment(t *testing.T) {
 		Count: 3,
 	}
 
-	actual.FilterOldComment()
+	actual.FilterOldComment("")
 
 	if diff := cmp.Diff(actual, expected); diff != "" {
 		t.Errorf("Hogefunc differs: (-got +want)\n%s", diff)

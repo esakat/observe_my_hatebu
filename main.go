@@ -17,7 +17,7 @@ func main() {
 
 	// Loop
 	for {
-		// Get MyBookMark Entries from Redis
+		// Get MyBookMark Entries from Firestore
 		myEntries := GetMyHatebuEntries()
 
 		// Wait all operation
@@ -79,7 +79,7 @@ func main() {
 						// create icon url
 						iconUrl := fmt.Sprintf("https://cdn.profile-image.st-hatena.com/users/%s/profile.png", bookmark.User)
 
-						// Push to Redis
+						// Push to Firestore
 						PushSlackNotifyMessage(bookmark.User, writeText, myEntry.ThreadTimestamp, config.ChannelID, iconUrl)
 					}
 				} else {
