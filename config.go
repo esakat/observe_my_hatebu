@@ -12,7 +12,7 @@ type Config struct {
 	ChannelID                  string        `required:"true" split_words:"true"`
 	EntryCollectionName        string        `required:"true" split_words:"true"`
 	SlackMessageCollectionName string        `required:"true" split_words:"true"`
-	ProjectID string `required:"true" split_words:"true"`
+	ProjectID                  string        `required:"true" split_words:"true"`
 }
 
 var config Config
